@@ -3,19 +3,21 @@ public class StringExercise {
     public static void main(String[] args) {
 
 // PART 1
-    String message1 = "We don't need no education";
-    String message2 = "We don't need no thought control";
-    String message3 = "Check \"this\" out!, \"s inside of \" s!";
-    String message4 = "In windows, the main drive is usually C:\\";
-    String message5 = "I can do backslashes \\, dobule backslashes \\\\, and the amazing triple backslash \\\\\\!";
-        System.out.println(message1);
-        System.out.println(message2);
-        System.out.println(message3);
-        System.out.println(message4);
-        System.out.println(message5);
+//    String message = "We don't need no education";
+//        System.out.println(message);
+//    String message = "We don't need no thought control";
+//        System.out.println(message);
+//    String message = "Check \"this\" out!, \"s inside of \" s!";
+//        System.out.println(message);
+//    String message = "In windows, the main drive is usually C:\\";
+//        System.out.println(message);
+//    String message = "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslash \\\\\\!";
+//        System.out.println(message);
 
-    String message6 = message1 +"; " +message2 +"; " +message3 +"; " +message4 +"; " +message5;
-        System.out.println(message6);
+    String message = "We don't need no education\n" + "We don't need no thought control\n\n" +
+            "Check \"this\" out!, \"s inside of \" s!\n\n" + "In windows, the main drive is usually C:\\\\\n\n" +
+            "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslash \\\\\\!\n";
+        System.out.println(message);
 
 // PART 2
 
