@@ -9,14 +9,17 @@ public class Bob {
 
             System.out.println("Say something to Bob. Make sure you use punctuation.");
             String speak = bobScanner.nextLine();
-            if(speak.endsWith("?")) System.out.println("Sure");
+            if(speak.endsWith("?")) System.out.println("Sure.");
             else if(speak.endsWith("!")) System.out.println("Whoa, chill out!");
             else if(speak.contentEquals("")) System.out.println("Fine. Be that way!");
             else System.out.println("Whatever.");
 
-//            System.out.println("Do you want to continue? Y/N");
-//            String response = bobScanner.nextLine();
-//            if (!response.toLowerCase().equals("y")) confirm = false;
+
+
+
+            System.out.println("Do you want to continue? Y/N");
+            String response = bobScanner.nextLine();
+            if (!response.toLowerCase().equals("y")) confirm = false;
         }
 
 
