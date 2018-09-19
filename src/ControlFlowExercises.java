@@ -121,26 +121,25 @@ public class ControlFlowExercises {
  * */
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("What number would you like to go up to?");
-        int userInteger1 = scanner.nextInt();
-
-
-
-        System.out.println("Here is your table!");
-        System.out.println(" number | squared | cubed");
-        System.out.println("------- | ------- | -----");
-        for(long f = 1; f <= userInteger1; f++){
-            System.out.format("%-8s| %-8s| %-8s%n",f,f*f,f*f*f);//use format to do a table; negative number before s gives you spaces
-        }
-
-
-
-
-
-
+//        System.out.print("What number would you like to go up to?");
+//        int userInteger1 = scanner.nextInt();
+//
+//
+//
+//        System.out.println("Here is your table!");
+//        System.out.println(" number | squared | cubed");
+//        System.out.println("------- | ------- | -----");
+//        for(long f = 1; f <= userInteger1; f++){
+//            System.out.format("%-8s| %-8s| %-8s%n",f,f*f,f*f*f);//use format to do a table; negative number before s gives you spaces
+//        }
+//
+//
+//
+//
+//
+//
 //        System.out.println("Do you want to continue? Y/N");
 //        String userInput2 = scanner.next();
-//
 //        if (userInput2.toLowerCase().contains("y")) {
 //            System.out.println("What number would you like to go up to?");
 //            int userInteger3 = scanner.nextInt();
@@ -148,8 +147,8 @@ public class ControlFlowExercises {
 //            System.out.println("Here is your table!");
 //            System.out.println("   number   |   squared   |   cubed   ");
 //            System.out.println("------------|-------------|-----------");
-//            for(int f = 1; f <= userInteger3; f++){
-//                System.out.println(f + "           |"+ f*f+ "            |"+ f*f*f);
+//            for(long f = userInteger1+1; f <= userInteger3; f++){ //used 1 up from the previous number to begin the next cycle
+//                System.out.format("%-8s| %-8s| %-8s%n",f,f*f,f*f*f);//use format to do a table; negative number before s gives you spaces
 //            }
 //        }
 //        else {
@@ -158,58 +157,50 @@ public class ControlFlowExercises {
 
 
 //EXERCISE 4 + BONUS
-
-//        System.out.println("Would you like to check your grade? Y/N");
-//        String userConfirmation1 = scanner.next();
-//        if(userConfirmation1.toLowerCase().contains("y")){
+//Class walkthrough
+//    boolean confirm = true;
+//        while(confirm) {
+//            System.out.println("Please enter grade (0-100)");
+//            int grade = scanner.nextInt();
+//            char letterGrade = '*';
+//            if(grade >=0 && grade <=100){ //is a valid grade no negatives
+//                if (grade >= 88) letterGrade = 'A';
+//                else if (grade >= 80) letterGrade = 'B';
+//                else if (grade >= 67) letterGrade = 'C';
+//                else if (grade >= 60) letterGrade = 'D';
+//                else letterGrade = 'F';
 //
-//            System.out.println("Please enter a numerical grade.");
-//            double userGradeNumber = scanner.nextDouble(); //changed this to double to account for decimal values.
-//            if(userGradeNumber >= 96){
-//                System.out.println("You have an A+");
 //            }
-//            else if(userGradeNumber < 96 && userGradeNumber >= 92){
-//                System.out.println("You have an A");
-//            }
-//            else if(userGradeNumber < 92 && userGradeNumber >= 88){
-//                System.out.println("You have an A-");
-//            }
-//            else if(userGradeNumber < 88 && userGradeNumber >= 84){
-//                System.out.println("You have an B+");
-//            }
-//            else if(userGradeNumber < 84 && userGradeNumber >= 82){
-//                System.out.println("You have an B");
-//            }
-//            else if(userGradeNumber < 82 && userGradeNumber >= 80){
-//                System.out.println("You have an B-");
-//            }
-//            else if(userGradeNumber < 80 && userGradeNumber >= 75){
-//                System.out.println("You have an C+");
-//            }
-//            else if(userGradeNumber < 75 && userGradeNumber >= 72){
-//                System.out.println("You have an C");
-//            }
-//            else if(userGradeNumber < 72 && userGradeNumber >= 67){
-//                System.out.println("You have an C-");
-//            }
-//            else if(userGradeNumber < 67 && userGradeNumber >= 64){
-//                System.out.println("You have an D+");
-//            }
-//            else if(userGradeNumber < 64 && userGradeNumber >= 62){
-//                System.out.println("You have an D");
-//            }
-//            else if(userGradeNumber < 62 && userGradeNumber >= 60){
-//                System.out.println("You have an D-");
-//            }
-//            else if(userGradeNumber < 60){
-//                System.out.println("Your grade range is a F");
-//            }
-//        }
-//        else{
-//            System.out.println("Goodbye! ('-')");
+//            System.out.println(letterGrade);
+//            System.out.println("Do you want to continue?");
+//            String response = scanner.next();
+//            if (!response.toLowerCase().contains("y")) confirm = false;
+//
 //        }
 
+        System.out.println("Would you like to check your grade? Y/N");
+        String userConfirmation = scanner.next();
+        if(userConfirmation.toLowerCase().contains("y")){
 
+            System.out.println("Please enter a numerical grade.");
+            double userGradeNumber = scanner.nextDouble(); //changed this to double to account for decimal values.
+            if(userGradeNumber >= 96) System.out.println("You have an A+");
+            else if(userGradeNumber < 96 && userGradeNumber >= 92) System.out.println("You have an A");
+            else if(userGradeNumber < 92 && userGradeNumber >= 88) System.out.println("You have an A-");
+            else if(userGradeNumber < 88 && userGradeNumber >= 84) System.out.println("You have an B+");
+            else if(userGradeNumber < 84 && userGradeNumber >= 82) System.out.println("You have an B");
+            else if(userGradeNumber < 82 && userGradeNumber >= 80) System.out.println("You have an B-");
+            else if(userGradeNumber < 80 && userGradeNumber >= 75) System.out.println("You have an C+");
+            else if(userGradeNumber < 75 && userGradeNumber >= 72) System.out.println("You have an C");
+            else if(userGradeNumber < 72 && userGradeNumber >= 67) System.out.println("You have an C-");
+            else if(userGradeNumber < 67 && userGradeNumber >= 64) System.out.println("You have an D+");
+            else if(userGradeNumber < 64 && userGradeNumber >= 62) System.out.println("You have an D");
+            else if(userGradeNumber < 62 && userGradeNumber >= 60) System.out.println("You have an D-");
+            else if(userGradeNumber < 60) System.out.println("Your grade range is a F");
+        }
+        else{
+            System.out.println("Goodbye! ('-')");
+        }
 
     }
 }
