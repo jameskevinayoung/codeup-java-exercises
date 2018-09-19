@@ -13,6 +13,10 @@ public class Bob {
             else if(speak.endsWith("!")) System.out.println("Whoa, chill out!");
             else if(speak.contentEquals("")) System.out.println("Fine. Be that way!");
             else System.out.println("Whatever.");
+
+//            System.out.println("Do you want to continue? Y/N");
+//            String response = bobScanner.nextLine();
+//            if (!response.toLowerCase().equals("y")) confirm = false;
         }
 
 
