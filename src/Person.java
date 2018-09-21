@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class Person {
 //PART 1
+    //what are the states for these objects?
+    //behaviors for objects of this type?
+    //Command N; CONSTRUCTOR; ENTER
+
+
 
 
     private String name;//private string
@@ -11,11 +16,14 @@ public class Person {
     }
 
     // returns the person's name
+    // getters asks questions
+
     public String getName(){
         return name;
     }
 
     // changes the name property to the passed value
+    // setters are commands
     public void setName(String name){ //this is talking to an instance (because it's void), but is changing a value
         this.name = name;
     }
