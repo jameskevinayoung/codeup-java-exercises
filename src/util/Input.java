@@ -41,8 +41,7 @@ public class Input {
             return getDouble(min,max);//recall the function
     }
     public double getDouble(){
-
-         double doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
+            doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
             return doubleInput;
 
     }
