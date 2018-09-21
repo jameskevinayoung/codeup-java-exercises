@@ -83,11 +83,11 @@ public class MethodsExercises {
     }
 
 
-    public static int factorial(int min, int max){
+    public static int factorial(int number){
 
         Scanner factorialScanner = new Scanner(System.in);
 
-        int number = factorialScanner.nextInt();
+        int userFactorial = factorialScanner.nextInt();
 
         if (number == 0)
             return 1;
@@ -132,7 +132,7 @@ public class MethodsExercises {
 
         //Factorials
         System.out.println("Pick a number to factor between 1 and 10");
-        int userInput = factorial()
+
     }
 }
 
