@@ -10,6 +10,16 @@ public class Pushups {
     }
 
 
+    public static int[] reverse(int[] nums){ //reverse method that receivs an int[] of nums as the parameter;
+        int[]backwards = new int[nums.length];//create a new array called backwards that will have the same amount of space as the nums parameter's length
+        for(int i = 0; i<nums.length; i++){//do a for loop  where i begins at index 0 and goes the length of the array;
+            //backwards array begins at the end of the array and replaces the index of nums at the backwards location
+            //i.e. in an array of numbers 1-9, nums[0] is the same as backwards[8] which is 1;
+            backwards[backwards.length - i -1] = nums[i];
+        }
+        return backwards;
+    }
+
     public static void main(String[] args) {
 //        boolean isBad = true;
 //        System.out.println(isBad);
@@ -32,6 +42,20 @@ public class Pushups {
 
 //        countDown(7);
 
+
+        int[] numbers = {1,2,3,4,5,6,7,8,9};//input an array of numbers in the numbers array
+        for(int num: numbers) System.out.print(num + " ");//enhanced loop (forEach) taking the numbers and printing it out on the screen;
+        System.out.println();
+
+        for (int num:reverse(numbers)) System.out.print(num + " ");//taking the numbers and placing them in the reverse method and printing;
+
+
+
+//        TicTacToe game - new TicTacToe();
+//
+//        while(true){
+//            get.takeTurn();
+//        }
 
 
 
