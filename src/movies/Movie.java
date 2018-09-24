@@ -1,5 +1,4 @@
 package movies;//part 3.a
-import util.Input;
 
 public class Movie {
 
@@ -23,6 +22,8 @@ public class Movie {
     public String getMovie(String name, String category){
         this.name = name;
         this.category = category;
+
+        return name + ", " + category;
     }
 
 
