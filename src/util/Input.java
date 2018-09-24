@@ -10,7 +10,7 @@ public class Input {
     public String getString(){ return this.inputScanner.next(); }
 
 
-    public String getString(String prompt)
+//    public String getString(String prompt);
 
     public boolean yesNo(){
 

@@ -1,4 +1,15 @@
 public class Pushups {
+
+
+    public static int countDown(int number){//static is needed because this is not an instance of this method being used
+        if (number > 0){//condition to countDown
+            System.out.println(number);//this prints the initial number passed
+            return countDown(number-1);//this is the recursion
+        }else System.out.println("BlastOff!!!");
+        return number;//you have to return something
+    }
+
+
     public static void main(String[] args) {
 //        boolean isBad = true;
 //        System.out.println(isBad);
@@ -19,6 +30,7 @@ public class Pushups {
 //        String manOnFireQuotes = "You move, you make one sound, I'll snatch the life right out of you. You understand?";
 //        System.out.println(manOnFireQuotes);
 
+//        countDown(7);
 
 
 
