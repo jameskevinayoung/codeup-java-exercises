@@ -7,9 +7,11 @@ public class Input {
     private Scanner inputScanner = new Scanner(System.in);
 
 
-    public String getString(){
-        return getString();
-    }
+    public String getString(){ return this.inputScanner.next(); }
+
+
+    public String getString(String prompt)
+
     public boolean yesNo(){
 
         String response = inputScanner.next();
