@@ -13,12 +13,10 @@ public class Movie {
     //create getters for the movie name and category
 
     public String getMovieName(String name){
-        String movieName = name;
-        return movieName;
+        return name;
     }
     public String getMovieCategory(String category){
-        String movieCategory = category;
-        return movieCategory;
+        return category;
 
     }
 
