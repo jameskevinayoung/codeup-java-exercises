@@ -8,7 +8,7 @@ public class Input {
 
 
     public String getString(){
-        return this.String;
+        return getString();
     }
     public boolean yesNo(){
 
@@ -36,16 +36,17 @@ public class Input {
 
     public double getDouble(double min, double max){//we have an double method; 2 parameters (min and max)
         double doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
-        if(doubleInput < min || doubleInput> max){//if that input is less than min or greater the max;
+        if(doubleInput < min || doubleInput> max) {//if that input is less than min or greater the max;
             System.out.println("You are outside the range. Please choose again");//let them know they're outside the range
-            return getDouble(min,max);//recall the function
+            return getDouble(min, max);//recall the function
+        }
+        else {
+            System.out.println("Your number was in range");
+            return doubleInput;
+        }
     }
     public double getDouble(){
-            doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
-            return doubleInput;
-
+        double doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
+        return doubleInput;
     }
-
-
-
 }
