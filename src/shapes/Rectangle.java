@@ -1,9 +1,10 @@
 package shapes;
 //Interfaces and abstract exercises part 1.a
 public class Rectangle extends Quadrilateral implements Measurable{
-//    public Rectangle(int length, int width) {
-//        super(length, width);
-//    }
+
+    public Rectangle(int length, int width) {
+        super(length, width);
+    }
 
     @Override
     public void setLength(int length) {

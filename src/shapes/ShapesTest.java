@@ -3,15 +3,14 @@ package shapes;
 import org.w3c.dom.css.Rect;
 
 //part 1.e
-public class ShapesTest implements Measurable {
+public class ShapesTest {
 
     public static void main(String[] args){
 
-        Measurable myShape = new Measurable();
+        Measurable myShape = new Rectangle(4, 3);
 
         System.out.println(myShape.getArea());
-        get
-
+        System.out.println(myShape.getPerimeter());
 
 
 
