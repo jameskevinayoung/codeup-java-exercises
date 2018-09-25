@@ -3,29 +3,49 @@ package shapes;
 import org.w3c.dom.css.Rect;
 
 //part 1.e
-public class ShapesTest {
+public class ShapesTest implements Measurable {
 
     public static void main(String[] args){
+
+        Measurable myShape = new Measurable();
+
+        System.out.println(myShape.getArea());
+        get
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //part 1.f
     //create a rectangle type called box1
 
-        Rectangle box1 = new Rectangle(5, 4);
+//        Rectangle box1 = new Rectangle(5, 4);
 
         //used .method() on the new instance of Rectangle, but didn't work at first because the methods were static;
         //after removal of static from the methods, take off the parameters and input the "this." property (this.length/this.width);
         //then print box1.getArea/getPerimeter() to confirm the box's area is 20 and perimeter is 18;
 
         //part 1.g
-        System.out.println(box1.getArea());
-        System.out.println(box1.getPerimeter());
+//        System.out.println(box1.getArea());
+//        System.out.println(box1.getPerimeter());
 
         //part 1.h
-        Rectangle box2 = new Square(5);
+//        Rectangle box2 = new Square(5);
 
         //part 1.i
-        System.out.println(box2.getArea());
-        System.out.println(box2.getPerimeter());
+//        System.out.println(box2.getArea());
+//        System.out.println(box2.getPerimeter());
 
 
         //part 1.j
@@ -41,6 +61,24 @@ public class ShapesTest {
          * This uses that argument as the side instance that was created from the side property just as length and width,
          * and applied them to the side variable for the getArea/Perimeter methods that override the Rectangle getArea/Perimeter methods
          */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
