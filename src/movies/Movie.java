@@ -1,6 +1,7 @@
 package movies;//part 3.a
 
 public class Movie {
+    public int length;
 
 
     //part 3.b
@@ -20,7 +21,11 @@ public class Movie {
 
 
     //this is the movie constructor
-    public  Movie(String name, String category){this.name = name; this.category = category;}
+    //use the movie constructor to add movie title and category
+    public  Movie(String name, String category){
+        this.name = name;
+        this.category = category;
+    }
 
 
 }

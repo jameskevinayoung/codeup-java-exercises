@@ -1,7 +1,7 @@
 package movies;
 
 import util.Input;
-
+import java.util.Arrays;
 public class MoviesApplication {
 //part 3.d
 
@@ -17,6 +17,13 @@ public class MoviesApplication {
             }
         }
     }
+//used the addPerson
+    public static String[] addMovie(String addedName, String addedCategory){
+        Movie newMovie = Arrays.copyOf(Movie, Movie.length+1);
+        newMovie[newMovie.length-1]= newMovie;
+
+        return newMovie;
+    }
 
 
 
@@ -30,7 +37,8 @@ public class MoviesApplication {
                 "2 - view movies in the animated category\n" +
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
-                "5 - view movies in the scifi category");
+                "5 - view movies in the scifi category\n"+
+                "6 - add a movie and category");
 
         //use the input packet from previous exercise and use the scanner from there
         Input movieInput = new Input();
@@ -60,6 +68,14 @@ public class MoviesApplication {
                 case 5:
                     displayMovie("scifi");
                     break;
+                case 6:
+                    Input userAdd = new Input();//create a new input called userAdd to add another movie
+                    System.out.println("Enter the name of the movie you would like to add");//ask the user to input a string name
+                    String addedName = userAdd.getString();//took the user's input
+                    System.out.println("Enter the category of the movie you would like to add");//asked user to input a string category
+                    String addedCategory = movieInput.getString();//took the user's input
+                    System.out.println(addMovie(addedName, addedCategory));//printed out the addMovie method with the user's movie name, and category
+                    break;//results did not work because no suitable method was found for the Movies array
             }
         }
 

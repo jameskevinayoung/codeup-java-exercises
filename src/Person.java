@@ -4,7 +4,7 @@ public class Person {
 //PART 1
     //what are the states for these objects?
     //behaviors for objects of this type?
-    //Command N; CONSTRUCTOR; ENTER
+    //Ctrl N; CONSTRUCTOR; ENTER
 
 
 
