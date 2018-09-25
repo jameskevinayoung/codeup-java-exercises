@@ -10,21 +10,17 @@ public class Movie {
     private String category;
 
     //create getters for the movie name and category
+    //don't need parameters because, getMovieName(String) in Movie cannot be applied
+    public String getMovieName(){return name;}
+    public String getMovieCategory(){return category;}
 
-    public String getMovieName(String name){
-        return name;
-    }
-    public String getMovieCategory(String category){
-        return category;
+    //create setters you need to pass a parameter
+    public void setCategory(String category){this.category = category;}
+    public void setName(String name){this.name = name;}
 
-    }
 
-    public String getMovie(String name, String category){
-        this.name = name;
-        this.category = category;
-
-        return name + ", " + category;
-    }
+    //this is the movie constructor
+    public  Movie(String name, String category){this.name = name; this.category = category;}
 
 
 }

@@ -1,19 +1,18 @@
 package movies;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
 import util.Input;
 
 public class MoviesApplication {
 //part 3.d
 
     //VOID: it is going to print out to the system (console.log)
-    private static void  displayMovie(String filter) {
-        Movie[] all = MoviesArray.findAll();
-        if(filter.equals("all"))
-            for(Movie movie: all) System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
+    private static void  displayMovie(String filter){ //this is a method to display the movie options by category;
+        Movie[] all = MoviesArray.findAll();//create a variable for a movie array and assign the Movies array findAll method to it.
+        if(filter.equals("all"))//if the user selects 1 then display all the movies
+            for(Movie movie: all) System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());//loop through each movie and print out the name and category
         else{
             for(Movie movie: all){
+//otherwise loop through each movie and if the movie category equals the user's selection print out the movies' name and category associated with the selection;
                 if(movie.getMovieCategory().equals(filter))System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
             }
         }
@@ -32,22 +31,36 @@ public class MoviesApplication {
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
                 "5 - view movies in the scifi category");
-        System.out.print("Enter your choice: ");
-//        Scanner movieScan = new Scanner(System.in);
-//        int userInput = movieScan.nextInt();
+
+        //use the input packet from previous exercise and use the scanner from there
         Input movieInput = new Input();
-        int userChoice = movieInput.getInt();
-
-        switch(userChoice){
-            case 0: return;
-            case 1: displayMovie("all"); break;
-            case 2: displayMovie("animated"); break;
-            case 3: displayMovie("drama"); break;
-            case 4: displayMovie("horror"); break;
-            case 5: displayMovie("scifi"); break;
 
 
+        //must put the choice in a loop inorder to continue until the user exits
+        while(true) {
+            System.out.print("Enter your choice: ");
 
+            int userChoice = movieInput.getInt();
+
+            switch (userChoice) {
+                case 0:
+                    return;
+                case 1:
+                    displayMovie("all");
+                    break;
+                case 2:
+                    displayMovie("animated");
+                    break;
+                case 3:
+                    displayMovie("drama");
+                    break;
+                case 4:
+                    displayMovie("horror");
+                    break;
+                case 5:
+                    displayMovie("scifi");
+                    break;
+            }
         }
 
     }
