@@ -18,9 +18,7 @@ public class Circle {
 
     public double getCircumference(){
         double pi = Math.PI;
-        double circumference = 2 * pi * radius;
-
-        return circumference;
+       return 2 * pi * radius;
     }
 
 
