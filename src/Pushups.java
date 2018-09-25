@@ -9,6 +9,19 @@ public class Pushups {
         return number;//you have to return something
     }
 
+    public static int countUp(int number){//static is needed because this is not an instance of this method being used
+        if (number == 1) {  //if the number is 1 print the number
+            System.out.println(number);
+        }
+        else { //otherwise
+            int n = number - 1; //the integer variable is number - 1
+            // use that variable in the recursion
+            countUp(n);
+            // then print out that number
+            System.out.println(number);
+        }
+        return number;
+    }
 
     public static int[] reverse(int[] nums){ //reverse method that receivs an int[] of nums as the parameter;
         int[]backwards = new int[nums.length];//create a new array called backwards that will have the same amount of space as the nums parameter's length
@@ -40,15 +53,15 @@ public class Pushups {
 //        String manOnFireQuotes = "You move, you make one sound, I'll snatch the life right out of you. You understand?";
 //        System.out.println(manOnFireQuotes);
 
-//        countDown(7);
+        countDown(7);
 
-
-        int[] numbers = {1,2,3,4,5,6,7,8,9};//input an array of numbers in the numbers array
-        for(int num: numbers) System.out.print(num + " ");//enhanced loop (forEach) taking the numbers and printing it out on the screen;
-        System.out.println();
-
-        for (int num:reverse(numbers)) System.out.print(num + " ");//taking the numbers and placing them in the reverse method and printing;
-
+//
+//        int[] numbers = {1,2,3,4,5,6,7,8,9};//input an array of numbers in the numbers array
+//        for(int num: numbers) System.out.print(num + " ");//enhanced loop (forEach) taking the numbers and printing it out on the screen;
+//        System.out.println();
+//
+//        for (int num:reverse(numbers)) System.out.print(num + " ");//taking the numbers and placing them in the reverse method and printing;
+//
 
 
 //        TicTacToe game - new TicTacToe();
@@ -57,6 +70,8 @@ public class Pushups {
 //            get.takeTurn();
 //        }
 
+
+        countUp(15);
 
 
     }

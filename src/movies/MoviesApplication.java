@@ -18,12 +18,17 @@ public class MoviesApplication {
         }
     }
 //used the addPerson
-    public static String[] addMovie(String addedName, String addedCategory){
-        Movie newMovie = Arrays.copyOf(Movie, Movie.length+1);
-        newMovie[newMovie.length-1]= newMovie;
+//    private static Movie[] addMovie(Movie[] oldArray){
+//        Movie newMovie = Arrays.copyOf(Movie, Movie.length+1);
+//        newMovie[newMovie.length-1]= newMovie;
+//
+    //for loop
 
-        return newMovie;
-    }
+
+
+
+//        return newMovie;
+//    }
 
 
 
@@ -41,6 +46,8 @@ public class MoviesApplication {
                 "6 - add a movie and category");
 
         //use the input packet from previous exercise and use the scanner from there
+
+       Movie[] newMoviesArray = MoviesArray.findAll();
         Input movieInput = new Input();
 
 
@@ -74,7 +81,7 @@ public class MoviesApplication {
                     String addedName = userAdd.getString();//took the user's input
                     System.out.println("Enter the category of the movie you would like to add");//asked user to input a string category
                     String addedCategory = movieInput.getString();//took the user's input
-                    System.out.println(addMovie(addedName, addedCategory));//printed out the addMovie method with the user's movie name, and category
+//                    System.out.println(addMovie(addedName, addedCategory));//printed out the addMovie method with the user's movie name, and category
                     break;//results did not work because no suitable method was found for the Movies array
             }
         }
