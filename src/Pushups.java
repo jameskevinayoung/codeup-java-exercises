@@ -23,6 +23,18 @@ public class Pushups {
         return number;
     }
 
+
+    public static int Fizzbuzz(int number){
+        for(int i = 1; i<=number; i++){
+            if(i%15 == 0) System.out.println("FizzBuzz");
+            else if(i%5 == 0) System.out.println("Buzz");
+            else if(i%3 == 0) System.out.println("Fizz");
+            else System.out.println(i);
+        }
+        return number;
+    }
+
+
     public static int[] reverse(int[] nums){ //reverse method that receivs an int[] of nums as the parameter;
         int[]backwards = new int[nums.length];//create a new array called backwards that will have the same amount of space as the nums parameter's length
         for(int i = 0; i<nums.length; i++){//do a for loop  where i begins at index 0 and goes the length of the array;
@@ -72,7 +84,7 @@ public class Pushups {
 
 
         countUp(15);
-
+        Fizzbuzz(100);
 
     }
 }
