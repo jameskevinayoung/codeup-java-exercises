@@ -7,12 +7,15 @@ public class ShapesTest {
 
     public static void main(String[] args){
 
-        Measurable myShape = new Rectangle(4, 3);
+        Measurable myShape = new Rectangle(4, 3);//if you re-casted this as a square you would need to change the parameters
 
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
+        System.out.println(((Rectangle) myShape).getLength());
+        System.out.println(((Rectangle) myShape).getWidth());
 
-
+//it is identifying that this is casted as a rectangle if you change this it will not work because the method is expecting a Rectangle
+//object only.
 
 
 
