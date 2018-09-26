@@ -14,6 +14,15 @@ public class ShapesTest {
         System.out.println(((Rectangle) myShape).getLength());
         System.out.println(((Rectangle) myShape).getWidth());
 
+
+        myShape = new Square(5);
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
+        ((Square) myShape).setLength(7);
+        System.out.println(((Square) myShape).getLength());
+        ((Square) myShape).setWidth(8);
+        System.out.println(((Square) myShape).getWidth());
+
 //it is identifying that this is casted as a rectangle if you change this it will not work because the method is expecting a Rectangle
 //object only.
 
