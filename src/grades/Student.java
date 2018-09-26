@@ -71,22 +71,50 @@ public class Student {
         //
 
         Student James = new Student("James");
-        System.out.println(James.getStudentName());
+        Student Kevin = new Student("Kevin");
+        Student Alexander = new Student("Alexander");
+        Student Karilynn = new Student("Karilynn");
+        Student Regina = new Student("Regina");
+
 
 //        ArrayList<Integer> JamesGrades = new ArrayList<>();//create a new instance of grades arrayList for a student
 
         //add this student's grades to the list
+
+        //James
         James.addGrade(84);
-        James.addGrade(74);
-        James.addGrade(74);
-        James.addGrade(88);
         James.addGrade(98);
         James.addGrade(90);
 
+        //Kevin
+        Kevin.addGrade(96);
+        Kevin.addGrade(98);
+        Kevin.addGrade(90);
+
+        //Alexander
+        Alexander.addGrade(85);
+        Alexander.addGrade(80);
+        Alexander.addGrade(79);
+
+        //Karilynn
+        Karilynn.addGrade(84);
+        Karilynn.addGrade(90);
+        Karilynn.addGrade(92);
+
+        //Regina
+        Regina.addGrade(78);
+        Regina.addGrade(67);
+        Regina.addGrade(100);
+
+
+
         //get the student's list of grades by using the ".grades" method which returns as an array
         //get the student's average grade
-        System.out.println(James.grades);
-        System.out.println(James.getGradeAverage());
+        System.out.println(James.getStudentName() + ", Grades: "+James.grades+ ", GPA: "+James.getGradeAverage());
+        System.out.println(Kevin.getStudentName() + ", Grades: "+Kevin.grades+ ", GPA: "+ Kevin.getGradeAverage());
+        System.out.println(Alexander.getStudentName() + ", Grades: "+Alexander.grades+ ", GPA: "+Alexander.getGradeAverage());
+        System.out.println(Karilynn.getStudentName() + ", Grades: "+Karilynn.grades+ ", GPA: "+Karilynn.getGradeAverage());
+        System.out.println(Regina.getStudentName() + ", Grades: "+Regina.grades+ ", GPA: "+Regina.getGradeAverage());
 
 
 
