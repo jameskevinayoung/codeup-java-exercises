@@ -45,6 +45,46 @@ public class Pushups {
         return backwards;
     }
 
+    public static int power(int a, int b){
+
+        //the first number is your base; the second is your exponent;
+        //initialize the result variable to 1;
+        //loop with i beginning at 0 and iterate while i is less than the base the increment up 1 and loop again;
+        //make the result equal to the result times the base; which begin as 1 * the base which is itself;
+        //each time you iterate you multiply by the base.
+
+
+        int result = 1;
+        for(int i = 0; i < b; i++){
+            result*= a;
+            //result = 1; a = 2; b = 6
+            //2 to the 6th power = 64
+
+            //i = 0;result = 1 * 2 == 2; i < 6
+            //i = 1;result = 2 * 2 == 4; i < 6
+            //i = 2;result = 4 * 2 == 8; i < 6
+            //i = 3;result = 8 * 2 == 16; i < 6
+            //i = 4;result = 16 * 2 == 32; i < 6
+            //i = 5;result = 32 * 2 == 64; i < 6
+            //i = 6; result = 64 *2 == 128; i = 6; you have exceeded the loop; break out of the loop and return previous line
+
+            System.out.println(result);
+
+        }
+        return result;
+    }
+
+    public static int powerRecursive(int base, int exponent){
+
+        if(exponent == 0){
+            return 1;
+        }
+
+        //in recursion you return your parameter and your function/method with +/- from your parameter
+        return (base * powerRecursive(base,exponent-1));
+    }
+
+
     public static void main(String[] args) {
 //        boolean isBad = true;
 //        System.out.println(isBad);
@@ -65,7 +105,7 @@ public class Pushups {
 //        String manOnFireQuotes = "You move, you make one sound, I'll snatch the life right out of you. You understand?";
 //        System.out.println(manOnFireQuotes);
 
-        countDown(7);
+//        countDown(7);
 
 //
 //        int[] numbers = {1,2,3,4,5,6,7,8,9};//input an array of numbers in the numbers array
@@ -83,8 +123,12 @@ public class Pushups {
 //        }
 
 
-        countUp(15);
-        Fizzbuzz(100);
+//        countUp(15);
+//        Fizzbuzz(100);
 
+
+        power(4, 8);
+
+        System.out.println(powerRecursive(2, 6));
     }
 }
