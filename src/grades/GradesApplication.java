@@ -1,6 +1,7 @@
 package grades;
 import java.util.HashMap;
-import java.util.ArrayList;
+import util.Input;
+//import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -8,10 +9,11 @@ public class GradesApplication {
             HashMap<String, Student> students = new HashMap<>();
 
             Student student1 = new Student("student1");
+        System.out.println();
+            students.put("CodeupStudent1",student1);
             student1.addGrade(85);
             student1.addGrade(76);
             student1.addGrade(67);
-            students.put("CodeupStudent1",student1);
         System.out.println(student1.getGradeAverage());
 
             Student student2 = new Student("student2");
@@ -36,6 +38,39 @@ public class GradesApplication {
         System.out.println(student4.getGradeAverage());
         students.put("CodeupStudent4",student4);
 
+        //inorder to get the student usernames
+        //use for loop to iterate through the HashMap key set by string type of variable
+        //then print out each username
+
+        for(String username: students.keySet()){
+            System.out.print("|"+ username +"| ");
+
+        }
+        System.out.println();
+
+
+
+        Input gradeScan = new Input();
+        System.out.println("What student would you like to see more information on?");
+        String userInput = gradeScan.getString();
+
+        if(students.containsKey(userInput)) {
+            Student studentInfo = students.get(userInput);
+            System.out.println(studentInfo);
+            System.out.println("Name: " +studentInfo.getStudentName() + " - GitHub username: " + userInput);
+            System.out.println("Current Average: "+ studentInfo.getGradeAverage());
+        }else {
+            System.out.println("Sorry, no student found with the gihub username of \""+userInput+ "\".");
+        }
+        System.out.println("What student would you like to see more information on another student?");
+
+
+
+
+//        System.out.println(students);
+//        System.out.println(students.get("CodeupStudent2").getStudentName());
+//        System.out.println(students.get("CodeupStudent3").getStudentName());
+//        System.out.println(students.get("CodeupStudent4").getStudentName());
 
 
 
