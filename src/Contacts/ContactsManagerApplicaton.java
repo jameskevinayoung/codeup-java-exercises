@@ -24,8 +24,8 @@ public class ContactsManagerApplicaton extends Contacts {
             if(Files.notExists(ContactsDirectory)) {
                 Files.createDirectory(ContactsDirectory);
             }if(Files.exists(contacts)){
-                contactLine. = Files.readAllLines(contacts);
-                for(String line:lines) System.out.println(line);
+                contactLine = Files.readAllLines(contacts);
+                for(String line:contactLine) System.out.println(line);
             }
         }catch(IOException e){
             System.out.println(e);
