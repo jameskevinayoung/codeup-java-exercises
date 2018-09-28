@@ -92,32 +92,6 @@ public class Pushups {
 
         //use the input to get user input of an integer or double
 
-        Input input = new Input();
-        System.out.println("Please enter an integer");
-
-        //initialize the variables outside of any methods to be able to reuse further in the code.
-
-        String num = input.getString();
-        String nums = input.getString();
-//        System.out.println(num);
-//        System.out.println(nums);
-        //use the try/cat blocks
-
-        try{
-
-            Integer.valueOf(num);
-            Double.valueOf(nums);
-
-            System.out.println(num);
-            System.out.println(nums);
-        }catch (InputMismatchException e){
-            System.out.println("Not valid number");
-            System.out.println("Please enter an integer");
-        }
-
-        System.out.println("goodbye!");
-
-
 
 //        boolean isBad = true;
 //        System.out.println(isBad);
