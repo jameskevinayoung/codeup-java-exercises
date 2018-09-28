@@ -31,8 +31,16 @@ public class Input {
         }
     }
     public int getInt(){
-        int integerInput = inputScanner.nextInt();
-        return integerInput;
+        int input;
+
+        try{
+            input = Integer.valueOf(getString());
+        }catch(NumberFormatException e){
+            System.out.println("That isn't a valid integer");
+            return getInt();
+        }
+
+        return input;
     }
 
 
@@ -51,4 +59,11 @@ public class Input {
         double doubleInput = inputScanner.nextInt();//take user input and hold in an double variable
         return doubleInput;
     }
+
+
+//    public int getBinary(){
+//
+//    }
+//
+//    public int
 }
