@@ -87,6 +87,18 @@ public class Pushups {
 //    }
 
 
+
+    public static boolean sleepIn(boolean weekday, boolean vacation){
+        if(!weekday || vacation) return true;
+        else return false;
+
+                    //or
+//        return (!weekday || vacation);
+    }
+
+
+
+
     public static void main(String[] args) {
 
 
@@ -137,6 +149,10 @@ public class Pushups {
 //        power(4, 8);
 //
 //        System.out.println(powerRecursive(2, 6));
+
+
+        System.out.println((sleepIn(true, true)));
+
 
     }
 }
