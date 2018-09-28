@@ -18,7 +18,7 @@ public class InputTest {
 //        System.out.println(nums);
         //use the try/cat blocks
 
-        try{
+//        try{
 //            num =input.getString();
             num =input.getInt();
 //            nums = input.getString();
@@ -28,10 +28,10 @@ public class InputTest {
 
             System.out.println(num);
 //            System.out.println(nums);
-        }catch (InputMismatchException e){
-            System.out.println("Not valid number");
-            System.out.println("Please enter an integer");
-        }
+//        }catch (InputMismatchException e){
+//            System.out.println("Not valid number");
+//            System.out.println("Please enter an integer");
+//        }
 
         System.out.println("Thank you!");
 
