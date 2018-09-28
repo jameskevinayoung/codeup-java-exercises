@@ -1,20 +1,15 @@
 package Contacts;
 
-import java.io.IOException;
-import  java.nio.file.Paths;
-import  java.nio.file.Path;
-import java.nio.file.Files;
-import java.util.List;
 
-public class Contacts {
+public class Contact {
 
     private String contactName;
     private String contactAddress;
     private String contactEmail;
     private String contactType;
-    private int contactPhoneNumber;
+    private long contactPhoneNumber;
 
-    public Contacts(String name, String address, String email, String contactType, int phoneNumber) {
+    public Contact (String name, String address, String email, String contactType, long phoneNumber) {
         this.contactName = name;
         this.contactAddress = address;
         this.contactEmail = email;
@@ -38,7 +33,7 @@ public class Contacts {
         return this.contactType;
     }
 
-    public int getContactPhoneNumber() {
+    public long getContactPhoneNumber() {
         return this.contactPhoneNumber;
     }
 
