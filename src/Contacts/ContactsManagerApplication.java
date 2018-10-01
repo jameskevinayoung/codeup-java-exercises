@@ -34,18 +34,20 @@ public class ContactsManagerApplication {
 //               "jakaiBAlexis@jumba.com","Personal",5152346789L);
 
 
+        String filename = "contacts.txt";
 
         Path ContactsDirectory = Paths.get("./contactsDirectory");
+        Path contactsFile = Paths.get("./contactsDirectory", filename);
 
-        Path contacts = Paths.get("./contactsDirectory", "contacts.txt");
+
         List<String> contactLine;
 
         try{
             if(Files.notExists(ContactsDirectory)) {//was able to make the directory
                 Files.createDirectory(ContactsDirectory);
-            }if(Files.notExists(contacts)){
-                contactLine = Files.readAllLines(contacts);
-                for(String line:contactLine) System.out.println(line);
+            }if(!Files.exists(contactsFile)){
+                Files.createFile(contactsFile);
+//                for(String line:contactLine) System.out.println(line);
             }
         }catch(IOException e){
             System.out.println(e);
@@ -72,7 +74,7 @@ public class ContactsManagerApplication {
 
             switch(userMenuInput){
                 case 1:
-                    displayContact("View contacts");break;
+//                    displayContact("View contacts");break;
                 case 2:
 //                    displayContact("Add a new contact");break;
                 case 3:

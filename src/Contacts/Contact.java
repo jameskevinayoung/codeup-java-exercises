@@ -9,6 +9,9 @@ public class Contact {
     private String contactType;
     private long contactPhoneNumber;
 
+
+
+
     public Contact (String name, String address, String email, String contactType, long phoneNumber) {
         this.contactName = name;
         this.contactAddress = address;
@@ -37,5 +40,10 @@ public class Contact {
         return this.contactPhoneNumber;
     }
 
+
+    public Contact addContact(){
+
+
+    }
 
 }
