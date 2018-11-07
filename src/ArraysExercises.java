@@ -60,11 +60,13 @@ public class ArraysExercises {
                     //in the first index of the coins
                     if (coins[j] <= i) {
 
-                        /**
-                         * the coin at index of i - coin at index of j equals a certain amount
-                         * result of i(5) - j(3) = 2
-                         * if result isn't Infinity and the result + 1 is less than index of the minimum coins arra
-                         */
+    /**
+     * the coin at index of i - coin at index of j equals a certain amount
+     * result of i(5) - j(3) = 2
+     * if result isn't Infinity and the result + 1 is less than index of the minimum coins array the
+     * minimum coins in the first index is the result +1
+     * There for the minimum number of coins is 3
+     */
                         int result = minimumCoins[i - coins[j]];
 
 
